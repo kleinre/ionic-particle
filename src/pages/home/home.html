@@ -15,9 +15,9 @@
   <div *ngIf="particle.token && particle.device">
       <h3>Color Reader</h3>
       <div>
-          <h5>Particle device status</h5>
+          <h5>Purpose</h5>
           <p>
-            You can display different device states by checking <code>particle.device</code>
+            With this device you can touch an object and the color of the object will be displayed on the app as an RGB value reading and display the color on the screen
           </p>
           <p *ngIf="!particle.device || !particle.device.connected">The device is offline</p>
           <p *ngIf="particle.device && particle.device.connected">You are currently viewing {{particle.device.name}}</p>
