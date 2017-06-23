@@ -28,13 +28,13 @@
           <!--<p>
             You can subscribe to variables by calling <code>particle.pollVariable</code>.
           </p>-->
-          <span [style.color]="rgb" >Blah</span>
-          <h5> Red: {{rgb}}</h5>
+          <!--<span [style.color]="rgb" >Blah</span>-->
+          <h5> Red: {{red}}</h5>
           <h5> Green: {{green}}</h5>
           <h5> Blue: {{blue}}</h5>
       </div>
       <div>
-          <h5>Custom components</h5>
+          <!--<h5>Custom components</h5>-->
           <!--<p>
             You can also create custom components. It's also more efficient to update components by subscribing to events 
             from your device, by calling <code>particle.subscribe</code>
@@ -42,11 +42,11 @@
           <particle-progress [event]="'variableUpdate'" [min]="2" [max]="10"></particle-progress>-->
       </div>
       <div>
-        <h5>Calling functions</h5>
+        <!--<h5>Calling functions</h5>
         <p>
             You can call device functions with <code>particle.callFunction</code>
         </p>
-        <button ion-button (click)="particle.callFunction('fun1')">Call a function</button>
+        <button ion-button (click)="particle.callFunction('fun1')">Call a function</button>-->
       </div>
   </div>
 </ion-content>
