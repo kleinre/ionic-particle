@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding> 
+<ion-content padding [style.background-color]="rgb" > 
   <div *ngIf="!particle.token">
       Please login and select a device. <br />
       <button ion-button (click)="login()">Login</button>
@@ -19,17 +19,19 @@
           <p>
             With this device you can touch an object and the color of the object will be displayed on the app as an RGB value reading and display the color on the screen
           </p>
+          <h5>Device Status</h5>
           <p *ngIf="!particle.device || !particle.device.connected">The device is offline</p>
           <p *ngIf="particle.device && particle.device.connected">You are currently viewing {{particle.device.name}}</p>
       </div>
       <div>
-          <h5>Device variables</h5>
-          <p>
+          <h3>RGB Color Reading</h3>
+          <!--<p>
             You can subscribe to variables by calling <code>particle.pollVariable</code>.
-          </p>
-          <p>
-            The device variable "var1" automatically polls, and the current value is {{red}}
-          </p>
+          </p>-->
+          <span [style.color]="rgb" >Blah</span>
+          <h5> Red: {{rgb}}</h5>
+          <h5> Green: {{green}}</h5>
+          <h5> Blue: {{blue}}</h5>
       </div>
       <div>
           <h5>Custom components</h5>
